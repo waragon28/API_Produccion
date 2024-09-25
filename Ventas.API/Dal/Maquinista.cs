@@ -32,7 +32,7 @@ namespace InspeccionProduccion.API.Dal
                 string strQuery =string.Format("SELECT T0.\"VisResCode\" as \"ID\", T0.\"ResName\" as \"Descripcion\" FROM \"{0}\".ORSC T0 WHERE \"VisResCode\" IN ("+
                     "'ENS-001','ENV-001','ENV-003','ENV-005','ENV-006','ENV-007','ENV-008','ENV-009','ENV-011','ENV-012','ENV-013','ENV-014','ENV-015','ENV-017','ENV-018','ENV-020','ENV-026','ENV-027','ENV-028',"+
                     "'ENV-029','ENV-030','ENV-002','ENV-022') ", _configuration.GetValue<string>("ServiceLayer:CompanyDB"));
-                /*CANBIO SOLICITADO POR YELINA*/
+                /*CANBIO SOLICITADO POR YELINA - */
                 using (HanaCommand commnad = new HanaCommand(strQuery, connection))
                 {
                     using (HanaDataReader reader = (HanaDataReader)commnad.ExecuteReader(System.Data.CommandBehavior.CloseConnection))
